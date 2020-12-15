@@ -1,11 +1,11 @@
 //importa express JS
 const express = require('express');
-const controller = require('../controllers/auth')
+const controller = require('../controllers/about')
 //esta ruta va recibir todas las acciones
-const authRouter = express.Router();
+const router = express.Router();
 
 //el primer get sera para enviar la primera pagina que se quiere mostrar
 //pueden enviarse diferentes metodos
-authRouter.get('/', controller.renderAuth);
+router.get('/', controller.renderAbout);
 
-module.exports = authRouter;
+module.exports = router;
