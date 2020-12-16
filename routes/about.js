@@ -1,6 +1,7 @@
 //importa express JS
-const express = require('express');
-const controller = require('../controllers/about')
+import express from 'express'
+import controller from '../controllers/about.js'
+
 //esta ruta va recibir todas las acciones
 const router = express.Router();
 
@@ -8,4 +9,4 @@ const router = express.Router();
 //pueden enviarse diferentes metodos
 router.get('/', controller.renderAbout);
 
-module.exports = router;
+export default router
