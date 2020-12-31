@@ -1,16 +1,9 @@
-export const posts = [{
-    title: "Post 1",
-    time: "Dec 09 2020",
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quo vel animi eaque quis repellat voluptatum esse laborum sunt quod, provident vero. Doloremque perferendis eligendi eius, excepturi corporis dolor natus!"
-},
+import mongoose from 'mongoose'
+const { Schema } = mongoose
 
-{title: "Post 2",
-    time: "Dec 09 2020",
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quo vel animi eaque quis repellat voluptatum esse laborum sunt quod, provident vero. Doloremque perferendis eligendi eius, excepturi corporis dolor natus!"
-},
+const postSchema = new Schema({
+    title: String,
+    body: String
+});
 
-{title: "Post 3",
-    time: "Dec 09 2020",
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quo vel animi eaque quis repellat voluptatum esse laborum sunt quod, provident vero. Doloremque perferendis eligendi eius, excepturi corporis dolor natus!"
-}
-]
+export const Post = mongoose.model( 'Post', postSchema );
